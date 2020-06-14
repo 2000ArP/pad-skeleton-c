@@ -3,6 +3,7 @@
 #include <stdio.h>  /* contains type FILE * */
 #include <stdint.h>  /* contains exact integer types int32_t, uint8_t */
 #include <stdbool.h> /* contains the boolean */
+#include <stdlib.h>
 #include <string.h>
 
 typedef uint8_t byte_t; /* raw memory will be typed as uint8 */
