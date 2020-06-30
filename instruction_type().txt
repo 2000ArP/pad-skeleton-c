@@ -1,0 +1,56 @@
+int instruction_type(byte_t ins)     // returns 0 if instruction has no args, 1 if it has 1 byte arg, 2 if 2 byte args, 3 if short arg, or 4 if not an instruction
+{
+    switch(ins)
+    {
+        case 0x10:
+            return 1;
+        case 0x59:
+            return 0;
+        case 0xFE:
+            return 0;
+        case 0xA7:
+            return 3;
+        case 0xFF:
+            return 0;
+        case 0x60:
+            return 0;
+        case 0x7E:
+            return 0;
+        case 0x99:
+            return 3;
+        case 0x9B:
+            return 3;
+        case 0x9F:
+            return 3;
+        case 0x84:
+            return 2;
+        case 0x15:
+            return 1;
+        case 0xFC:
+            return 0;
+        case 0xB6:
+            return 3;
+        case 0xB0:
+            return 0;
+        case 0xAC:
+            return 0;
+        case 0x36:
+            return 1;
+        case 0x64:
+            return 0;
+        case 0x13:
+            return 3;
+        case 0x00:
+            return 0;
+        case 0xFD:
+            return 0;
+        case 0x57:
+            return 0;
+        case 0x5F:
+            return 0;
+        case 0xC4:
+            return 0;
+        default:
+            return 4;   // returned if this function's argument is not an opcode for an instruction
+    }
+}
